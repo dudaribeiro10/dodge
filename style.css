@@ -1,0 +1,76 @@
+body{
+    background-color: #000000e1;
+}
+.gallery-container{
+    display: none;
+    width: 100%;
+    height: 500px;
+}
+.gallery-container.visible{
+    display: flex;
+}
+.gallery-container img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: .7s ease;
+}
+.gallery-container img:hover {
+    border-radius: 10%;
+    width: 500px;
+    filter: brightness(100%);
+}
+.container_me{
+    font-size: 50px;
+    text-align: center;
+    color: #FF5722;
+}
+.card{
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+.card .name , .card .e-mail,.tel {
+    flex: 1 2 10rem;
+    padding: 1em 1em;
+}
+.card, .submit , .tel{
+    flex: 1 0 2rem;
+}
+.submit{
+    background-color: #606060;
+}
+.container_my{
+    color: #FF5722;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.card .Telefone{
+    flex: auto;
+}
+button{
+    background-color: #fd3c16;
+    padding: 10px;
+}
+/* Aplica apenas o efeito de hover no botão "Carros" */
+button[onclick="toggleGaleria()"] {
+  transition: all 0.3s ease; /* Suaviza a transição */
+}
+
+button[onclick="toggleGaleria()"]:hover {
+  filter: blur(0);
+  transform: scale(1.10);
+  background: linear-gradient(90deg, #fd3c16, #606060);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: transparent;
+}
+.card ::placeholder{
+    color: #000;
+}
